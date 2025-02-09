@@ -1,8 +1,8 @@
 <!--
  * @Author: error: error: git config user.name & please set dead value or install git && error: git config user.email & please set dead value or install git & please set dead value or install git
  * @Date: 2025-02-09 21:35:36
- * @LastEditors: error: error: git config user.name & please set dead value or install git && error: git config user.email & please set dead value or install git & please set dead value or install git
- * @LastEditTime: 2025-02-09 21:35:54
+ * @LastEditors: lost_3stars 1364282438@qq.com
+ * @LastEditTime: 2025-02-09 22:35:52
  * @FilePath: \Regex-Practise\2.create-regex.html
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -14,10 +14,29 @@
   <title>Document</title>
 </head>
 <body>
-  
+  <div class="content">
+    hello world.com
+  </div>
+  <div class="content">
+    hello world.com
+  </div>
 </body>
 
 <script>
-  
+  // let hd = 'hello world.com'
+  // console.log(/u/g.test(hd))
+
+  // let reg = new RegExp('o','g')
+  // console.log(reg.test(hd))
+
+  let con = prompt('请输入要检测的内容，支持正则')
+  console.log(con)
+  const reg = new RegExp(con,'g')
+  let divs = document.getElementsByClassName('content')
+  for(const div of divs) {
+    div.innerHTML = div.innerHTML.replace(reg, str => {
+      return `<span style="color:red">zzz</span>`
+    })
+  }
 </script>
 </html>
