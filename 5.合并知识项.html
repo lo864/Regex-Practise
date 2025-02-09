@@ -1,0 +1,56 @@
+<!--
+ * @Author: lost_3stars 1364282438@qq.com
+ * @Date: 2025-02-09 22:49:55
+ * @LastEditors: lost_3stars 1364282438@qq.com
+ * @LastEditTime: 2025-02-09 23:50:38
+ * @FilePath: \Regex-Practise\5.合并知识项.html
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" name="user" />
+    <span></span>
+  </body>
+
+  <script>
+    // 转义字符的理解
+    // let hd = 'https://www.helloworld.com'
+    // const reg = new RegExp(/https?\:\/\/\w+\.\w+\.com/,'g')
+
+    // console.log(reg.test(hd))
+
+    //字符边界的约束
+    // let hd = '3asdasd4'
+    // console.log(/^\d$/g.test(hd))
+    // const span = document.querySelector('span')
+    // document
+    //   .querySelector("[name='user']")
+    //   .addEventListener('keyup', function () {
+    //     console.log(this)
+    //     const flag = this.value.match(/^\d{3,6}$/g)
+    //     span.innerHTML = flag ? 'yes' : 'no'
+    //   })
+
+    //元字符
+    // let hd = '2025 helloworld.com'
+    // console.log(hd.match(/\d+/g))
+
+    // let hd = `
+    // 张三: 010-9999999,李四: 020-8888888
+    // `
+    // console.log(hd.match(/[^-\d:]+/g))
+
+    //\s空白
+    // console.log(hd.match(/\s/g))
+
+    // \w(字母数字和下划线) \W(反义) \d(数字) \D
+    let hd = 'helloworld2025_'
+    console.log(hd.match(/\D+/g))
+  </script>
+</html>
