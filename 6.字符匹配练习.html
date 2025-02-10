@@ -1,0 +1,83 @@
+<!--
+ * @Author: lost_3stars 1364282438@qq.com
+ * @Date: 2025-02-10 22:37:41
+ * @LastEditors: lost_3stars 1364282438@qq.com
+ * @LastEditTime: 2025-02-10 23:48:55
+ * @FilePath: \Regex-Practise\6.字符匹配练习.html
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+
+  <script>
+    // let hd = 'https://www.helloworld.com'
+    // console.log(hd.match(/https?:\/\/\w+\.\w+\.\w+/g))
+
+    // let hd = '010 - 9999999'
+    // console.log(hd.match(/\d+\s-\s\d{7}/g))
+
+    // let hd = 'hello'
+    // console.log(hd.match(/[\s\S]/))
+
+    //模式修正符
+    // let hd = 'yigehaoreEn'
+    // console.log(hd.match(/e/i))
+    // console.log(hd.match(/e/g))
+    // console.log(hd.match(/e/gi))
+    // console.log(hd.replace(/e/gi, '@'))
+
+    //多行匹配
+    // let hd = `
+    // #1 js,200yuan #
+    // #2 asd,300元 #
+    // #3 helloworld.com # hhh
+    // `
+
+    // console.log(
+    //   hd.match(/^\s*#\d+\s+.+\s*#$/gm).map((v) => {
+    //     v = v.replace(/\s*#\d\s+/, '').replace(/\s*#/, '')
+    //     ;[name, price] = v.split(',')
+    //     return {
+    //       name,
+    //       price,
+    //     }
+    //   })
+    // )
+
+    //汉字与字符属性
+    // let hd = 'helloworld.com123,萨顶顶撒说的。'
+    // console.log(hd.match(/\p{L}/gu))
+    //匹配标点符号
+    // console.log(hd.match(/\p{P}/gu))
+    //匹配汉字
+    // console.log(hd.match(/\p{sc=Han}/gu))
+
+    //lastIndex属性的使用
+    // let hd = 'helloworld'
+    // const reg = /\w/g
+    // console.log(reg.exec(hd))
+    // while ((res = reg.exec(hd))) {
+    //   console.log(res)
+    // }
+
+    //有效率的Y模式
+    // let hd = 'QQ号为: 0000,11111,22222  是啊大叔大婶大叔大叔大叔大叔大叔的'
+    // const reg = /(\d+),?/y
+    // reg.lastIndex = 6
+    // while ((res = reg.exec(hd))) {
+    //   console.log(res[1])
+    // }
+
+    //原子表
+    // let hd = 'helloworld'
+    // console.log(hd.match(/[ed]/g))
+    // let tel = '2020/02-03'
+    // console.log(tel.match(/^\d{4}[-\/]\d{2}-\d{2}/g))
+  </script>
+</html>
