@@ -1,0 +1,70 @@
+<!--
+ * @Author: lost_3stars 1364282438@qq.com
+ * @Date: 2025-02-12 20:41:32
+ * @LastEditors: lost_3stars 1364282438@qq.com
+ * @LastEditTime: 2025-02-12 22:16:18
+ * @FilePath: \Regex-Practise\7.原子表解析.html
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- <p>hello world</p>
+    <h1>helloworld.com</h1>
+    <h2>goodbye</h2> -->
+  </body>
+
+  <script>
+    // let hd = '(helloworld.)+'
+    // console.log(hd.match(/[.+]/gi))
+
+    //忽略换行符
+    // let hd = `
+    //   hello
+    //   world
+    // `
+    // console.log(hd.match(/[^\s]+/g))
+
+    //正则操作dom元素
+    // let body = document.body
+    // const reg = /<(h[1-6])>[\s\S]*<\/\1>/gi
+    // body.innerHTML = body.innerHTML.replace(reg, '')
+
+    //了解原子组
+    // let hd = `
+    // <h1>hello</h1>
+    // <h2>world</h2>
+    // `
+
+    // const reg = /<(h[1-6])>([\s\S]*)<\/\1>/gi
+    // console.dir(hd.match(reg))
+
+    //邮箱验证中原子组的使用
+    // let hd = 'asdasdasd@sina.com.cn'
+    // console.log(hd.match(/^([\w-])+@([\w-]+\.)+(com|org|cc|cn|net)$/i))
+
+    //原子组引用完成替换操作
+    // let hd = `
+    // <h1>hello</h1>
+    // <span>world</span>
+    // <h2>hdasda</h2>
+    // `
+    // console.log(hd.replace(/<(h[1-6])>([\s\S]+)<\/\1>/gi, '<p>$2</p>'))
+
+    //嵌套分组与不记录组
+    // let hd = `
+    // https://www.helloworld.com
+    // http:hellowrold.com
+    // `
+    // const reg = /https?:\/\/((?:\w+\.)?\w+\.(?:com|org|cn))/i
+    // console.log(reg.exec(hd))
+    // console.log(reg.exec(hd))
+
+    //多种重复匹配基本使用
+  </script>
+</html>
