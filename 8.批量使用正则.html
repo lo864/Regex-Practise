@@ -1,0 +1,76 @@
+<!--
+ * @Author: lost_3stars 1364282438@qq.com
+ * @Date: 2025-02-13 20:31:51
+ * @LastEditors: lost_3stars 1364282438@qq.com
+ * @LastEditTime: 2025-02-13 22:06:04
+ * @FilePath: \Regex-Practise\8.批量使用正则.html
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- <main>
+      <span>helloworld</span>
+      <span>baidu.com</span>
+      <span>tencent.com</span>
+    </main> -->
+    <!-- <h1>baidu.com</h1>
+    <h2>tencent.com</h2>
+    <h3>百度</h3> -->
+
+    <main>百度是个垃圾公司，百度是个垃圾公司</main>
+  </body>
+  <script>
+    //多个正则检测
+    // let hd = 'sd01A'
+    // const regList = [/^[a-z0-9]{5,10}$/i, /[A-Z]/]
+    // console.log(regList.every((e) => e.test(hd)))
+
+    //禁止贪婪
+    // let hd = 'hdddddd'
+    // console.log(hd.match(/hd+?/))
+    // let body = document.querySelector('main')
+    // body.innerHTML = body.innerHTML.replace(
+    //   /<span>([\s\S]*?)<\/span>/gi,
+    //   (v, p1) => {
+    //     return `<h4 style='color: red'>hhh -${p1}</h4>`
+    //   }
+    // )
+
+    //使用matcjAll完成全局匹配
+    // let reg = /<(h[1-6])>([\s\S]*?)<\/\1>/g
+    // const body = document.querySelector('body')
+    // const hd = body.innerHTML.matchAll(reg)
+    // for (const it of hd) {
+    //   console.log(it[2])
+    // }
+
+    //split方法
+    // let hd = '2020/09-12'
+    // console.log(hd.split(/[-\/]/))
+
+    // let hd = '(010)9999999 (020)1234567'
+    // console.log(
+    //   hd.replace(/\((\d{3,4})\)(\d+)/g, (res, p1, p2) => {
+    //     console.log(p1, p2)
+    //     return '-'
+    //   })
+    // )
+    // console.log(hd.replace(/\((\d{3,4})\)(\d+)/g, '$1-$2'))
+
+    // $`内容右边 `$内容左边 $&匹配到的内容
+    // let hd = '=kk='
+    // console.log(hd.replace(/kk/, '$&9'))
+    // console.log(hd.replace(/kk/, '$`$`  $&'))
+    let main = document.querySelector('body main')
+    main.innerHTML = main.innerHTML.replace(
+      /百度/g,
+      '<a href="https://www.baidu.com/">$&</a>'
+    )
+  </script>
+</html>
